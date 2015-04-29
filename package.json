@@ -15,10 +15,10 @@
     "sass",
     "utility"
   ],
-  "author": {
-    "name": "Jarad Light",
-    "url": "http://github.com/jaradlight"
-  },
+  "author": "Jarad Light (https://github.com/jaradlight)",
+  "contributors": [
+    "Chris Eastwood (https://github.com/drclaw)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaradlight/flask/issues"
