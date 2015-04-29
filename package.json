@@ -1,0 +1,30 @@
+{
+  "name": "flask",
+  "version": "0.1.0",
+  "description": "Helper files for Sass projects.",
+  "main": "sass/_flask.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaradlight/flask.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "utility"
+  ],
+  "author": {
+    "name": "Jarad Light",
+    "url": "http://github.com/jaradlight"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaradlight/flask/issues"
+  },
+  "homepage": "https://github.com/jaradlight/flask",
+  "devDependencies": {
+    "sassdoc": "^2.1.9"
+  }
+}

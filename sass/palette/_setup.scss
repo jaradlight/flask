@@ -1,0 +1,39 @@
+$flask-color-base-white:  #fff !default;
+$flask-color-base-black:  #242424 !default;
+$flask-color-teal-base: #2ed399 !default;
+
+/// Color definitions for use with the palette function.
+/// At minimum, a color requires a `base` value. All other values are optional.
+/// @name palettes
+/// @group palette
+
+
+$palettes: (
+
+  white: (
+    pure: #fff,
+    base:  $flask-color-base-white,
+    light: lighten($flask-color-base-white, 15),
+    dark:  darken($flask-color-base-white, 15)
+  ),
+
+  black: (
+    pure: #000,
+    base:  $flask-color-base-black,
+    light: lighten($flask-color-base-black, 15),
+    dark:  darken($flask-color-base-black, 15)
+  ),
+
+  teal: (
+    base: $flask-color-teal-base,
+    dark: darken($flask-color-teal-base, 5),
+    light: lighten($flask-color-teal-base, 5)
+  ),
+
+) !default;
+
+$palette-aliases: (
+
+  brand: teal
+
+) !default;

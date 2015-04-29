@@ -1,0 +1,16 @@
+linters:
+  SelectorFormat:
+    enabled: false
+  LeadingZero:
+    style: include_zero
+  PropertySortOrder:
+    enabled: false
+  QualifyingElement:
+    allow_element_with_attribute: true
+    allow_element_with_class: true
+  ElsePlacement:
+    style: new_line
+  ColorKeyword:
+    enabled: false
+  ColorVariable:
+    enabled: false
