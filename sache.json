@@ -1,0 +1,10 @@
+{
+  "name": "flask",
+  "description": "Helper files for Sass projects.",
+  "website": "https://github.com/jaradlight/flask",
+  "tags": [
+    "css",
+    "sass",
+    "helpers"
+  ]
+}
