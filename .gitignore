@@ -1,5 +1,8 @@
 node_modules/
 bower_components/
+sassdoc/
+test/.sass-cache
 .DS_store
 .sass-cache
-sassdoc/
+.bundle
+Gemfile.lock

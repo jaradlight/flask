@@ -1,0 +1,29 @@
+@import '../sass/palette/setup';
+@import '../sass/palette/palette';
+
+@include test-module('Palette') {
+
+  @include test('Palette [function]') {
+
+    $expect: #2ed399;
+    $test: palette(teal);
+
+    @include assert-equal($test, $expect, 'Returns a hex color.');
+  }
+
+  @include test('Palette Aliases [function]') {
+
+    $expect: #2ed399;
+    $test: palette(brand);
+
+    @include assert-equal($test, $expect, 'Returns a hex color.');
+  }
+
+  @include test('Palette Unknown Color [function]') {
+
+    $test: palette(foo);
+
+    @include assert-false($test, 'Returns an error.');
+  }
+
+}
