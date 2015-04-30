@@ -5,4 +5,5 @@ test/.sass-cache
 .DS_store
 .sass-cache
 .bundle
+npm-debug.log
 Gemfile.lock
