@@ -1,6 +1,6 @@
 {
   "name": "flask",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helper files for Sass projects.",
   "main": "sass/_flask.scss",
   "scripts": {
