@@ -27,7 +27,7 @@
     @return map-get(map-get($palettes, $aliased-type), $tone);
   }
   @else {
-    // @warn "Could not find requested color `#{$type}` in $palettes or $palette-aliases.";
+    @warn "Could not find requested color `#{$type}` in $palettes or $palette-aliases.";
     @return null;
   }
 }
