@@ -1,0 +1,26 @@
+@import '../sass/font/setup';
+@import '../sass/font/font';
+
+@include test-module('Font Stack') {
+
+  @include test('Font Stack [function]') {
+
+    // $expect: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    $expect: "Open Sans", ('Helvetica Neue', Helvetica, Arial, sans-serif);
+    $test: font-stack(open-sans);
+
+    @include assert-equal($test, $expect, 'Returns proper list.');
+  }
+}
+
+@include test-module('Font Type') {
+
+  @include test('Font Type [function]') {
+
+    // $expect: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    $expect: sans-serif;
+    $test: font-type(open-sans);
+
+    @include assert-equal($test, $expect, 'Returns proper list.');
+  }
+}
