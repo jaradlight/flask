@@ -4,7 +4,7 @@
   "description": "Helper files for Sass projects.",
   "main": "sass/_flask.scss",
   "scripts": {
-    "test": "bundle exec true-cli test/test.scss"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",

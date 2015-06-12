@@ -6,10 +6,10 @@ var truesass = require('sass-true');
 
 var sassFile = path.join(__dirname, 'test/test.scss');
 
-var testScss = function() {
+gulp.task('test', function() {
   truesass.runSass({file: sassFile}, function(){ return true; });
-}
+})
 
 gulp.task('default', function() {
-  gulp.watch(['sass/**/*.scss', 'test/**/*.scss'], ['testScss']);
+  gulp.watch(['sass/**/*.scss', 'test/**/*.scss'], ['test']);
 });
