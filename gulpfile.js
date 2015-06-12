@@ -6,5 +6,5 @@ gulp.task('test', shell.task([
 ]));
 
 gulp.task('default', function() {
-  gulp.watch('./sass/**/*.scss', ['test']);
+  gulp.watch(['sass/**/*.scss', 'test/**/*.scss'], ['test']);
 });
