@@ -4,7 +4,7 @@
   "description": "Helper files for Sass projects.",
   "main": "sass/_flask.scss",
   "scripts": {
-    "test": "bundle exec true-cli test/test.scss"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,10 @@
   },
   "homepage": "https://github.com/jaradlight/flask",
   "devDependencies": {
-    "sassdoc": "^2.1.9",
-    "gulp": "~3.8.11",
-    "gulp-shell": "~0.4.1"
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.4.2",
+    "path": "^0.11.14",
+    "sass-true": "^2.0.2",
+    "sassdoc": "^2.1.15"
   }
 }
