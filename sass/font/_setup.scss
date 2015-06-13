@@ -1,0 +1,20 @@
+$fonts: (
+  open-sans: (
+    font-type:    sans-serif,
+    regular:      'Open Sans',
+    special:      'Open Sans Special'
+  ),
+  merriweather: (
+    font-type:    serif,
+    regular:      'Merriweather'
+  )
+);
+
+$font-aliases: (
+  primary-serif: merriweather,
+  primary-sans-serif: opensans
+);
+
+$fallback-serif: 'Georgia', serif;
+$fallback-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fallback-mono: Consolas, monaco, monospace;

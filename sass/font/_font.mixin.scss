@@ -1,0 +1,9 @@
+@mixin font($font-name, $font-weight, $modifiers: null) {
+  font-family: font-stack($font-name, $font-weight);
+  font-weight: normal;
+  font-style: normal;
+
+  @if($modifiers) {
+    @include font-modifiers($font-name, $modifiers);
+  }
+}
