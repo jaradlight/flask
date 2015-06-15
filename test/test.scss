@@ -1,8 +1,18 @@
 $true-terminal-output: true;
 
+// Testing library
 @import 'true';
 
-@import 'palette';
-@import 'font';
+// Flask Library
+@import '../sass/flask';
 
+// Test setup
+@import 'setup/palette';
+@import 'setup/font';
+
+// Tests
+@import 'tests/palette';
+@import 'tests/font';
+
+// Test reports
 @include report;
