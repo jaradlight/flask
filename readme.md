@@ -6,4 +6,4 @@
 
 This project is a collection of helpful functions and mixins for use in Sass projects using the SCSS syntax.
 
-Currently the only helper is the `palette` function which together with a structured color map can be used to neatly manage colors across a site.
+Currently includes helpers for colours and fonts with the `palette` function and suite of `font` functions and mixins.
