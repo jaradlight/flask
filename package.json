@@ -26,6 +26,7 @@
   "homepage": "https://github.com/jaradlight/flask",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3",
     "gulp-shell": "^0.4.2",
     "path": "^0.11.14",
     "sass-true": "^2.0.2",
