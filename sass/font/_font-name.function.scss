@@ -15,6 +15,6 @@
     @return map-get(map-get($fonts, $aliased-family), $variant);
   }
   @else {
-    @error "Could not find requested font in $fonts or $font-aliases.";
+    @error "Could not find requested font `#{$family}` in $fonts or $font-aliases.";
   }
 }
