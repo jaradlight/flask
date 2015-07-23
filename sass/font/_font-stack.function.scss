@@ -3,14 +3,5 @@
 // Returns a full font stack based on the given fontface and its variant.
 
 @function font-stack($family, $variant: 'regular') {
-  $fallback: '';
-
-  @if (font-type($family) == serif) {
-    $fallback: $fallback-serif;
-  }
-  @else if (font-type($family) == sans-serif) {
-    $fallback: $fallback-sans-serif;
-  }
-
-  @return font-name($family, $variant), $fallback;
+  @return font-name($family, $variant), font-fallback($family);
 }

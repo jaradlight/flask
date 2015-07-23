@@ -7,7 +7,11 @@ $fonts: (
   ),
   merriweather: (
     font-type:    serif,
-    regular:      'Merriweather'
+    regular:      'Merriweather',
+    fallback: (
+      'Merriweather Fallback',
+      serif
+    )
   )
 );
 
@@ -16,6 +20,15 @@ $font-aliases: (
   primary-sans-serif: open-sans
 );
 
-$fallback-serif: 'Georgia', serif;
-$fallback-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$fallback-mono: Consolas, monaco, monospace;
+$font-fallbacks: (
+  serif: (
+    'Georgia',
+    serif
+  ),
+  sans-serif: (
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif
+  )
+);

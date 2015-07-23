@@ -1,0 +1,15 @@
+// Font Fallback Function
+//
+// Returns the fallback for a font.
+// Prioritizes a defined fallback over a global/shared fallback.
+
+@function font-fallback($family) {
+  @if(map-has-key(map-get($fonts, $family), fallback)){
+    // If the font has a fallback, return it.
+    @return map-get(map-get($fonts, $family), fallback);
+  }
+  @else {
+    // Otherwise, return the default fallback for the font type.
+    @return map-get($font-fallbacks, font-type($family));
+  }
+}

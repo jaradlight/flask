@@ -2,8 +2,6 @@
 @include test-module('Font Stack') {
 
   @include test('Font Stack [function]') {
-
-    // $expect: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     $expect: "Open Sans", ('Helvetica Neue', Helvetica, Arial, sans-serif);
     $test: font-stack(open-sans);
 
@@ -22,7 +20,6 @@
   }
 }
 
-
 @include test-module('Font Name') {
   @include test('Font Name [function]') {
     $expect: 'Open Sans';
@@ -36,5 +33,21 @@
     $test: font-name(open-sans, special);
 
     @include assert-equal($test, $expect, 'Returns specified font name.');
+  }
+}
+
+@include test-module('Font Fallback') {
+  @include test('Font Type Fallback [function]') {
+    $expect: ("Helvetica Neue", Helvetica, Arial, sans-serif);
+    $test: font-fallback(open-sans);
+
+    @include assert-equal($test, $expect, 'Returns default fallback for font type.');
+  }
+
+  @include test('Font Custom Fallback [function]') {
+    $expect: ("Merriweather Fallback", serif);
+    $test: font-fallback(merriweather);
+
+    @include assert-equal($test, $expect, 'Returns custom fallback for font.');
   }
 }
