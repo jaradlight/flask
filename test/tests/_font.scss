@@ -50,4 +50,27 @@
 
     @include assert-equal($test, $expect, 'Returns custom fallback for font.');
   }
+
+  @include test('Font Aliased Fallback [function]') {
+    $expect: ("Helvetica Neue", Helvetica, Arial, sans-serif);
+    $test: font-fallback(primary-sans-serif);
+
+    @include assert-equal($test, $expect, 'Returns default fallback for aliased font family.');
+  }
+}
+
+@include test-module('Font Family Key') {
+  @include test('Font Family Key Normal [function]') {
+    $expect: open-sans;
+    $test: font-family-key(open-sans);
+
+    @include assert-equal($test, $expect, 'Returns expected font-family key.');
+  }
+
+  @include test('Font Family Key Aliased [function]') {
+    $expect: open-sans;
+    $test: font-family-key(primary-sans-serif);
+
+    @include assert-equal($test, $expect, 'Returns expected font-family key.');
+  }
 }

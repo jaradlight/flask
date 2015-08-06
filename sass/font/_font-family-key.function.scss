@@ -1,0 +1,15 @@
+// Font Family Key Function
+//
+// Returns the key for a font family, or the key for an aliased font family.
+
+@function font-family-key($family) {
+  @if (map-has-key($fonts, $family)) {
+    @return $family;
+  }
+  @else if (map-has-key($font-aliases, $family)) {
+    @return map-get($font-aliases, $family);
+  }
+  @else {
+    @error 'Font family key `#{$family}` could not be found in `$fonts` or $font-aliases`.';
+  }
+}

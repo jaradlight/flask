@@ -4,12 +4,18 @@
 // Prioritizes a defined fallback over a global/shared fallback.
 
 @function font-fallback($family) {
-  @if(map-has-key(map-get($fonts, $family), fallback)){
-    // If the font has a fallback, return it.
-    @return map-get(map-get($fonts, $family), fallback);
+
+  $family-key: font-family-key($family);
+
+  @if (map-get(map-get($fonts, $family-key), fallback)) {
+    @return map-get(map-get($fonts, $family-key), fallback);
+  }
+  @else if (map-get($font-fallbacks, font-type($family-key))) {
+    @return map-get($font-fallbacks, font-type($family-key));
   }
   @else {
-    // Otherwise, return the default fallback for the font type.
-    @return map-get($font-fallbacks, font-type($family));
+    @warn 'Could not find fallback for family `#{$family}` in $fonts or $font-aliases.';
+    @return '';
   }
 }
+
