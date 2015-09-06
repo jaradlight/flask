@@ -1,0 +1,7 @@
+@function flask-error($message) {
+  @if ($flask-is-testing) {
+    @return $message;
+  } @else {
+    @error $message;
+  }
+}

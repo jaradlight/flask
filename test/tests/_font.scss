@@ -80,4 +80,11 @@
 
     @include assert-equal($test, $expect, 'Returns expected font-family key.');
   }
+
+  @include test('Font Family Key Error [function]') {
+    $expect: 'Could not find requested font `foo` in $fonts or $font-aliases.';
+    $test: font-family-key(foo);
+
+    @include assert-equal($test, $expect, 'Returns error message.');
+  }
 }

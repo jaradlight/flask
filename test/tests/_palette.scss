@@ -17,11 +17,12 @@
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
 
-  @include test('Palette Unknown Color [function]') {
+  @include test('Palette Key Error [function]') {
 
-    $test: palette(foo);
+    $test: palette-color-key(foo);
+    $expect: 'Could not find requested color `foo` in `$palettes` or `$palette-aliases`.';
 
-    @include assert-false($test, 'Returns an error.');
+    @include assert-equal($test, $expect, 'Returns expected error message.');
   }
 
 }

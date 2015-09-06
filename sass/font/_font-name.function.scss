@@ -12,7 +12,4 @@
   @if (map-has-key($fonts, $family-key)) {
     @return map-get(map-get($fonts, $family-key), $variant);
   }
-  @else {
-    @error "Could not find requested font `#{$family}` in $fonts or $font-aliases.";
-  }
 }

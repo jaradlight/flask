@@ -11,6 +11,6 @@
     @return map-get($palette-aliases, $color);
   }
   @else {
-    @return false;
+    @return flask-error('Could not find requested color `#{$color}` in `$palettes` or `$palette-aliases`.');
   }
 }

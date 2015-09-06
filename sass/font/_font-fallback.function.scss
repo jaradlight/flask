@@ -13,9 +13,4 @@
   @else if (map-get($font-fallbacks, font-type($family-key))) {
     @return map-get($font-fallbacks, font-type($family-key));
   }
-  @else {
-    @warn 'Could not find fallback for family `#{$family}` in $fonts or $font-aliases.';
-    @return '';
-  }
 }
-
