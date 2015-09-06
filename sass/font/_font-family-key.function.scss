@@ -6,10 +6,10 @@
   @if (map-has-key($fonts, $family)) {
     @return $family;
   }
-  @else if (map-has-key($font-aliases, $family)) {
+  @else if (variable-exists(font-aliases) and map-has-key($font-aliases, $family)) {
     @return map-get($font-aliases, $family);
   }
   @else {
-    @error 'Font family key `#{$family}` could not be found in `$fonts` or $font-aliases`.';
+    @return false;
   }
 }
