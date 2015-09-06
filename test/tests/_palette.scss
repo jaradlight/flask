@@ -1,8 +1,6 @@
-
 @include test-module('Palette') {
 
   @include test('Palette [function]') {
-
     $expect: #2ed399;
     $test: palette(teal);
 
@@ -10,7 +8,6 @@
   }
 
   @include test('Palette Aliases [function]') {
-
     $expect: #2ed399;
     $test: palette(brand);
 
@@ -18,11 +15,9 @@
   }
 
   @include test('Palette Key Error [function]') {
-
     $test: palette-color-key(foo);
     $expect: 'Could not find requested color `foo` in `$palettes` or `$palette-aliases`.';
 
     @include assert-equal($test, $expect, 'Returns expected error message.');
   }
-
 }
