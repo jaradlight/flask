@@ -2,7 +2,7 @@
 
 [![Build Status](https://api.travis-ci.org/jaradlight/flask.png?branch=master)](https://travis-ci.org/jaradlight/flask)
 
-Helper files for fonts and colours in Sass projecdts.
+Helper files for fonts and colours in Sass projects.
 
 ## Installation
 
