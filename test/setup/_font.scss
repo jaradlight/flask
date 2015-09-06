@@ -14,11 +14,6 @@ $fonts: (
   )
 );
 
-$font-aliases: (
-  primary-serif: merriweather,
-  primary-sans-serif: open-sans
-);
-
 $font-fallbacks: (
   serif: (
     'Georgia',
@@ -30,4 +25,9 @@ $font-fallbacks: (
     Arial,
     sans-serif
   )
+);
+
+$font-aliases: (
+  primary-serif: merriweather,
+  primary-sans-serif: open-sans
 );
