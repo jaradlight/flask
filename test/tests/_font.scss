@@ -34,6 +34,13 @@
 
     @include assert-equal($test, $expect, 'Returns specified font name.');
   }
+
+  @include test('Font Name Alias [function]') {
+    $expect: 'Open Sans Special';
+    $test: font-name(primary-sans-serif, special);
+
+    @include assert-equal($test, $expect, 'Returns specified font name.');
+  }
 }
 
 @include test-module('Font Fallback') {
