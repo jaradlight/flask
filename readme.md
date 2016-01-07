@@ -49,6 +49,10 @@ If you would like to use one or more features without importing everything, simp
 .teal-alias {
   color: palette(brand-primary); // #2ed399
 }
+
+.teal-light-alias {
+  color: palette(highlight); // #58dcae
+}
 ```
 
 ### Setup
@@ -77,11 +81,12 @@ $palettes: (
 
 #### $palette-aliases
 
-Optionally, a `$palette-aliases` map can assign aliases to colour groups. Aliases can be used in place of colour group keys as the first argument to `palette()`.
+Optionally, a `$palette-aliases` map can assign aliases to colour groups. Aliases can be used in place of colour group keys as the first argument to `palette()`. Additionally, aliases for specific colours may be defined by assigning a map of palette function arguments to the alias key.
 
 ``` sass
 $palette-aliases: (
-  brand-primary: teal
+  brand-primary: teal,
+  highlight: (teal, light)
 );
 ```
 

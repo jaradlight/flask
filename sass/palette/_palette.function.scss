@@ -22,6 +22,10 @@
 
   $color: palette-color-key($type);
 
+  @if (type-of($color) == list) {
+    @return palette(nth($color, 1), nth($color, 2));
+  }
+
   @if ($color and map-has-key($palettes, $color)) {
     @return map-get(map-get($palettes, $color), $tone);
   }

@@ -7,9 +7,16 @@
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
 
-  @include test('Palette Aliases [function]') {
+  @include test('Palette Aliases Color Base [function]') {
     $expect: #2ed399;
     $test: palette(brand);
+
+    @include assert-equal($test, $expect, 'Returns a hex color.');
+  }
+
+   @include test('Palette Aliases Color Variant [function]') {
+    $expect: #000000;
+    $test: palette(keyline);
 
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
