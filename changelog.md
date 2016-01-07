@@ -1,5 +1,13 @@
 # Flask Changelog
 
+0.2.8 (7 Jan 2016)
+------------------
+- Add `font-family` function.
+- Add deprecation warning to `font-stack` function.
+- Allow palette aliases to select non-base colors.
+- Update npm dependencies.
+- Add changelog.
+
 0.2.7 (14 Sep 2015)
 -------------------
 - Fix `flask-is-testing` causing errors if not defined.
