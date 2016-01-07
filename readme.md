@@ -91,8 +91,8 @@ $palette-aliases: (
 ### Usage
 
 ``` sass
-.font-stack {
-   font-family: font-stack(open-sans);
+.font-family {
+   font-family: font-family(open-sans);
 // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 

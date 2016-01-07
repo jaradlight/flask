@@ -1,3 +1,13 @@
+@include test-module('Font Family') {
+
+  @include test('Font Family [function]') {
+    $expect: "Open Sans", ('Helvetica Neue', Helvetica, Arial, sans-serif);
+    $test: font-family(open-sans);
+
+    @include assert-equal($test, $expect, 'Returns proper list.');
+  }
+}
+
 @include test-module('Font Stack') {
 
   @include test('Font Stack [function]') {
