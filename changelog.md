@@ -1,5 +1,9 @@
 # Flask Changelog
 
+0.2.9 (7 Jan 2016)
+------------------
+- Update various functions and mixins to use `font-family`.
+
 0.2.8 (7 Jan 2016)
 ------------------
 - Add `font-family` function.
