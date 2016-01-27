@@ -29,5 +29,6 @@ $font-fallbacks: (
 
 $font-aliases: (
   primary-serif: merriweather,
-  primary-sans-serif: open-sans
+  primary-sans-serif: open-sans,
+  heading: (open-sans, special),
 );

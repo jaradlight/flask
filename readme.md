@@ -106,6 +106,10 @@ $palette-aliases: (
 // font-family: "Open Sans";
 }
 
+font-name(primary-serif); // "Merriweather";
+
+font-name(heading);       // "Open Sans Special";
+
 font-type(open-sans);     // sans-serif
 
 font-fallback(open-sans); // "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -127,7 +131,6 @@ For each font group, required keys are:
 
 Optional keys:
 * `fallback` A map of fallback fonts for this font family. If set, will override the fallback used from `$font-fallbacks` which is based on `font-type`.
-
 
 
 ``` sass
@@ -164,12 +167,13 @@ $font-fallbacks: (
 
 #### $font-aliases
 
-Optionally, a `$font-aliases` map can assign aliases to fonts. Aliases can be used in place of font group keys in `font` functions.
+Optionally, a `$font-aliases` map can assign aliases to fonts. Aliases can be used in place of font group keys in `font` functions. Additionally, aliases for specific font variants may be defined by assigning a map of font-name function arguments to the alias key.
 
 ``` sass
 $font-aliases: (
   primary-serif: merriweather,
-  primary-sans-serif: open-sans
+  primary-sans-serif: open-sans,
+  heading: (open-sans, special),
 );
 ```
 

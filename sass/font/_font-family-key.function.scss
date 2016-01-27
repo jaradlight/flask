@@ -10,6 +10,6 @@
     @return map-get($font-aliases, $family);
   }
   @else {
-    @return flask-error('Could not find requested font `#{$family}` in $fonts or $font-aliases.');
+    @return flask-error('Could not find requested font `#{$family}` in `$fonts` or `$font-aliases`.');
   }
 }

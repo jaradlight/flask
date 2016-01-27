@@ -43,11 +43,25 @@
     @include assert-equal($test, $expect, 'Returns specified font name.');
   }
 
-  @include test('Font Name Alias [function]') {
+  @include test('Font Name Alias Base [function]') {
     $expect: 'Open Sans Special';
     $test: font-name(primary-sans-serif, special);
 
     @include assert-equal($test, $expect, 'Returns specified font name.');
+  }
+
+  @include test('Font Name Alias Variant [function]') {
+    $expect: 'Open Sans Special';
+    $test: font-name(heading);
+
+    @include assert-equal($test, $expect, 'Returns specified font name.');
+  }
+
+  @include test('Font Name Key Error [function]') {
+    $test: font-family-key(foo);
+    $expect: 'Could not find requested font `foo` in `$fonts` or `$font-aliases`.';
+
+    @include assert-equal($test, $expect, 'Returns expected error message.');
   }
 }
 
@@ -90,7 +104,7 @@
   }
 
   @include test('Font Family Key Error [function]') {
-    $expect: 'Could not find requested font `foo` in $fonts or $font-aliases.';
+    $expect: 'Could not find requested font `foo` in `$fonts` or `$font-aliases`.';
     $test: font-family-key(foo);
 
     @include assert-equal($test, $expect, 'Returns error message.');

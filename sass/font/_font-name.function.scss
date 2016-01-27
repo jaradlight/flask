@@ -9,7 +9,11 @@
 @function font-name($family, $variant: 'regular') {
   $family-key: font-family-key($family);
 
-  @if (map-has-key($fonts, $family-key)) {
+  @if (type-of($family-key) == list) {
+    @return font-name(nth($family-key, 1), nth($family-key, 2));
+  }
+
+  @if ($family-key and map-has-key($fonts, $family-key)) {
     @return map-get(map-get($fonts, $family-key), $variant);
   }
 }
