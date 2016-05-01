@@ -13,7 +13,7 @@ Install from your preferred package manager:
 
 Import to your stylesheets:
 
-``` sass
+``` scss
 // Installed with NPM
 @import '../node_modules/flask/sass/flask';
 
@@ -25,7 +25,7 @@ Import to your stylesheets:
 
 If you would like to use one or more features without importing everything, simply import the Flask core followed by the features you need.
 
-``` sass
+``` scss
 // Import Flask Core.
 @import '../node_modules/flask/sass/flask/core/core';
 
@@ -37,7 +37,7 @@ If you would like to use one or more features without importing everything, simp
 
 ### Usage
 
-``` sass
+``` scss
 .teal-base  {
   color: palette(teal);          // #2ed399
 }
@@ -61,7 +61,7 @@ If you would like to use one or more features without importing everything, simp
 
 Begin by defining base colours. You can simply define these inside the palette map instead, but separate base variables make it easier to programmatically define variants.
 
-``` sass
+``` scss
 $flask-color-teal-base: #2ed399;
 ```
 
@@ -69,7 +69,7 @@ $flask-color-teal-base: #2ed399;
 
 Next create the palette map. This variable will contain all colours and their variants. A colour group is defined by a nested map within the main palette map. The colour group key and any variant keys can be anything you like. However, every colour group needs one colour with the `base` key. Variants are optional.
 
-``` sass
+``` scss
 $palettes: (
   teal: (                                      // Colour group key
     base: $flask-color-teal-base,              // Base colour
@@ -83,7 +83,7 @@ $palettes: (
 
 Optionally, a `$palette-aliases` map can assign aliases to colour groups. Aliases can be used in place of colour group keys as the first argument to `palette()`. Additionally, aliases for specific colours may be defined by assigning a map of palette function arguments to the alias key.
 
-``` sass
+``` scss
 $palette-aliases: (
   brand-primary: teal,
   highlight: (teal, light)
@@ -95,7 +95,7 @@ $palette-aliases: (
 
 ### Usage
 
-``` sass
+``` scss
 .font-family {
    font-family: font-family(open-sans);
 // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -133,7 +133,7 @@ Optional keys:
 * `fallback` A map of fallback fonts for this font family. If set, will override the fallback used from `$font-fallbacks` which is based on `font-type`.
 
 
-``` sass
+``` scss
 $fonts: (
   merriweather: (
     font-type:    serif,
@@ -150,7 +150,7 @@ $fonts: (
 
 `$font-fallbacks` map variable:
 
-``` sass
+``` scss
 $font-fallbacks: (
   serif: (
     'Georgia',
@@ -169,7 +169,7 @@ $font-fallbacks: (
 
 Optionally, a `$font-aliases` map can assign aliases to fonts. Aliases can be used in place of font group keys in `font` functions. Additionally, aliases for specific font variants may be defined by assigning a map of font-name function arguments to the alias key.
 
-``` sass
+``` scss
 $font-aliases: (
   primary-serif: merriweather,
   primary-sans-serif: open-sans,
@@ -179,7 +179,7 @@ $font-aliases: (
 
 #### Additional Functions
 
-``` sass
+``` scss
 font-name(open-sans);        // "Open Sans"
 
 font-type(merriweather);     // serif
