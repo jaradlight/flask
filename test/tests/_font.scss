@@ -6,6 +6,18 @@
 
     @include assert-equal($test, $expect, 'Returns proper list.');
   }
+
+  @include test('Font Family [mixin]') {
+    @include assert('Outputs font-family property with full Open Sans font stack.') {
+      @include input {
+        @include font-family(open-sans);
+      }
+
+      @include expect {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    }
+  }
 }
 
 @include test-module('Font Stack') {
