@@ -1,5 +1,12 @@
 # Flask Changelog
 
+0.2.10 (11 May 2016)
+-----------------
+- Add the option to select specific fonts when defining font aliases.
+  - Font aliases were previously limited to aliasing regular font variants.
+- Add font-family mixin.
+- Improve documentation and general test consistency and coverage.
+
 0.2.9 (7 Jan 2016)
 ------------------
 - Update various functions and mixins to use `font-family`.
