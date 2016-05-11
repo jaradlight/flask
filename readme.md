@@ -39,19 +39,28 @@ If you would like to use one or more features without importing everything, simp
 
 ``` scss
 .teal-base  {
-  color: palette(teal);          // #2ed399
+  color: palette(teal);
+  // color: #2ed399;
 }
 
 .teal-light {
-  color: palette(teal, light);   // #58dcae
+  color: palette(teal, light);
+  // color: #43d7a3;
 }
 
 .teal-alias {
-  color: palette(brand-primary); // #2ed399
+  color: palette(brand-primary);
+  // color: #2ed399;
 }
 
-.teal-light-alias {
-  color: palette(highlight); // #58dcae
+.teal-alias-with-variant {
+  color: palette(brand-primary, light);
+  // color: #43d7a3;
+}
+
+.teal-aliased-variant {
+  color: palette(highlight);
+  // color: #43d7a3;
 }
 ```
 
@@ -96,23 +105,45 @@ $palette-aliases: (
 ### Usage
 
 ``` scss
-.font-family {
-   font-family: font-family(open-sans);
-// font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+.font-family-function {
+  font-family: font-family(open-sans);
+  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.font-family-mixin {
+  @include font-family(open-sans);
+  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .font-name {
-   font-family: font-name(open-sans);
-// font-family: "Open Sans";
+  font-family: font-name(open-sans);
+  // font-family: "Open Sans";
 }
 
-font-name(primary-serif); // "Merriweather";
+.font-name-aliased {
+  font-family: font-name(primary-sans-serif);
+  // font-family: "Open Sans";
+}
 
-font-name(heading);       // "Open Sans Special";
+.font-name-aliased-with-variant {
+  font-family: font-name(primary-sans-serif, special);
+  // font-family: "Open Sans Special";
+}
 
-font-type(open-sans);     // sans-serif
+.font-name-aliased-variant {
+  content: font-name(heading);
+  // content: "Open Sans Special";
+}
 
-font-fallback(open-sans); // "Helvetica Neue", Helvetica, Arial, sans-serif
+.font-type {
+  content: font-type(open-sans);
+  // content: sans-serif
+}
+
+.font-fallback {
+  content: font-fallback(open-sans);
+  // content: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
 ```
 
 ### Setup
@@ -173,16 +204,25 @@ Optionally, a `$font-aliases` map can assign aliases to fonts. Aliases can be us
 $font-aliases: (
   primary-serif: merriweather,
   primary-sans-serif: open-sans,
-  heading: (open-sans, special),
+  heading: (open-sans, special)
 );
 ```
 
 #### Additional Functions
 
 ``` scss
-font-name(open-sans);        // "Open Sans"
+.font-name {
+  content: font-name(open-sans);
+  // content: "Open Sans"
+}
 
-font-type(merriweather);     // serif
+.font-type {
+  content: font-type(merriweather);
+  // content: serif
+}
 
-font-fallback(merriweather); // "Georgia", serif
+.font-fallback {
+  content: font-fallback(merriweather);
+  // content: "Georgia", serif
+}
 ```
