@@ -22,13 +22,11 @@ $palettes: (
     base: $flask-color-teal-base,
     dark: darken($flask-color-teal-base, 5),
     light: lighten($flask-color-teal-base, 5)
-  ),
+  )
 
 );
 
 $palette-aliases: (
-
-  brand:     teal,
-  keyline: (black, pure)
-
+  brand-primary:      teal,
+  highlight: (teal, light)
 );

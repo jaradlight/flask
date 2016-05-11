@@ -11,7 +11,7 @@
 ///   }
 ///
 ///   .aliased {
-///     color: palette(brand);
+///     color: palette(brand-primary);
 ///   }
 /// @param {string} $type - Base color group key in $palettes.
 /// @param {string} $tone [base] - Tone key within a base color in $palettes.

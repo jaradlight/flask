@@ -1,5 +1,4 @@
 @include test-module('Font Family') {
-
   @include test('Font Family [function]') {
     $expect: "Open Sans", ('Helvetica Neue', Helvetica, Arial, sans-serif);
     $test: font-family(open-sans);
@@ -21,7 +20,6 @@
 }
 
 @include test-module('Font Stack') {
-
   @include test('Font Stack [function]') {
     $expect: "Open Sans", ('Helvetica Neue', Helvetica, Arial, sans-serif);
     $test: font-stack(open-sans);
@@ -31,7 +29,6 @@
 }
 
 @include test-module('Font Type') {
-
   @include test('Font Type [function]') {
     $expect: sans-serif;
     $test: font-type(open-sans);
@@ -48,21 +45,21 @@
     @include assert-equal($test, $expect, 'Returns regular font name.');
   }
 
-  @include test('Font Name Special [function]') {
+  @include test('Font Name Variant [function]') {
     $expect: 'Open Sans Special';
     $test: font-name(open-sans, special);
 
     @include assert-equal($test, $expect, 'Returns specified font name.');
   }
 
-  @include test('Font Name Alias Base [function]') {
+  @include test('Font Name Alias With Variant [function]') {
     $expect: 'Open Sans Special';
     $test: font-name(primary-sans-serif, special);
 
     @include assert-equal($test, $expect, 'Returns specified font name.');
   }
 
-  @include test('Font Name Alias Variant [function]') {
+  @include test('Font Name Aliased Variant [function]') {
     $expect: 'Open Sans Special';
     $test: font-name(heading);
 

@@ -1,22 +1,28 @@
 @include test-module('Palette') {
-
   @include test('Palette [function]') {
-    $expect: #2ed399;
+    $expect: $flask-color-teal-base;
     $test: palette(teal);
 
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
 
-  @include test('Palette Aliases Color Base [function]') {
-    $expect: #2ed399;
-    $test: palette(brand);
+  @include test('Palette Color Alias [function]') {
+    $expect: $flask-color-teal-base;
+    $test: palette(brand-primary);
 
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
 
-   @include test('Palette Aliases Color Variant [function]') {
-    $expect: #000000;
-    $test: palette(keyline);
+  @include test('Palette Color Alias With Variant [function]') {
+    $expect: lighten($flask-color-teal-base, 5);
+    $test: palette(brand-primary, light);
+
+    @include assert-equal($test, $expect, 'Returns a hex color.');
+  }
+
+  @include test('Palette Color Aliased Variant [function]') {
+    $expect: lighten($flask-color-teal-base, 5);
+    $test: palette(highlight);
 
     @include assert-equal($test, $expect, 'Returns a hex color.');
   }
