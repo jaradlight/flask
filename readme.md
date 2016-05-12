@@ -1,5 +1,7 @@
 # Flask
 
+[![Join the chat at https://gitter.im/jaradlight/flask](https://badges.gitter.im/jaradlight/flask.svg)](https://gitter.im/jaradlight/flask?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://api.travis-ci.org/jaradlight/flask.png?branch=master)](https://travis-ci.org/jaradlight/flask)
 
 Helper files for fonts and colours in Sass projects.
